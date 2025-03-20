@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for Ange</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ANGEEEEEE! Click mo tong button sa baba ne hihi wabyuu</h1>
+        <button onclick="scrollToMessage()">Click me</button>
+    </div>
+
+    <!-- Hidden message section -->
+    <div id="message" class="hidden-container">
+        <h2> Wabyuu soooo much Ange! 💖</h2>
+        <br>
+        <button onclick="scrollToVideo()">Click me Ugh</button>
+    </div>
+
+    <!-- Transparent video container -->
+    <div id="video-section" class="hidden-container">
+        <h2>For you, Ange! 🎥💕</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="HAHAHA.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function scrollToMessage() {
+            document.getElementById('message').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToVideo() {
+            document.getElementById('video-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('gii.jpg');
+	background-attachment:;
+	background-repeat: no-repeat;
+	background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Transparent Glass Effect */
+.container, .hidden-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 50px 0;
+}
+
+/* Grey Button */
+button {
+    background-color: #808080;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #696969;
+    transform: scale(1.1);
+}
+
+/* Hidden Sections */
+.hidden-container {
+    margin-top: 100vh;
+}
+
+/* Video Container (Transparent) */
+.video-container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+</style>
